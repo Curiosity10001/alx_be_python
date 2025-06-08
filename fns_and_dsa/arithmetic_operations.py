@@ -1,13 +1,14 @@
 def perform_operation(num1, num2, operation):
-    #definition of simple arithmetic functions
-    match operation:
-        case 'add':
-            result = num1 + num2
-        case 'subtract':
-            result = num1 - num2
-        case 'multiply':
-            result = num1 * num2
-        case 'divide':
-            result = num1 / num2 if num != 0 else "cannot divide with 0"
-        case _ :
-            "please enter a valid arithmetic operation"
+    if operation == 'add':
+        return num1 + num2
+    elif operation == 'subtract':
+        return num1 - num2
+    elif operation == 'multiply':
+        return num1 * num2
+    elif operation == 'divide':
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Cannot divide by zero"
+    else:
+        return "Please enter a valid arithmetic operation"
