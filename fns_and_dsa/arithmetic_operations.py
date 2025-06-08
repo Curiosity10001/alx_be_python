@@ -1,4 +1,4 @@
-def perform_operation(num1:float,num2:float,operation:str=['add','substract','multiply','divide']):
+def perform_operation(num1,num2,operation=['add','substract','multiply','divide']):
     #definition of simple arithmetic functions
     match operation:
         case 'add':
