@@ -1,4 +1,4 @@
-def perform_operation(num1,num2,operation=['add','substract','multiply','divide']):
+def perform_operation(num1,num2,operation):
     #definition of simple arithmetic functions
     match operation:
         case 'add':
@@ -8,4 +8,6 @@ def perform_operation(num1,num2,operation=['add','substract','multiply','divide'
         case 'multiply':
             result = num1 * num2
         case 'devide':
-            result = num1 / num2
+            result = num1 / num2 if num != 0 else "cannot divide with 0"
+        case _ :
+            "please enter a valid arithmetic operation"
